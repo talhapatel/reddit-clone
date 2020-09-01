@@ -2,8 +2,6 @@ package com.talha.springredditclone.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.springframework.stereotype.Component;
-
 import com.talha.springredditclone.dto.CommentsDto;
 import com.talha.springredditclone.model.Comment;
 import com.talha.springredditclone.model.Post;

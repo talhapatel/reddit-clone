@@ -12,13 +12,18 @@ import com.talha.springredditclone.model.Post;
 import com.talha.springredditclone.model.Subreddit;
 import com.talha.springredditclone.model.User;
 import com.talha.springredditclone.repository.CommentRepository;
+import com.talha.springredditclone.repository.VoteRepository;
+import com.talha.springredditclone.service.AuthService;
 
-@Component
 @Mapper(componentModel = "spring")
 public abstract class PostMapper {
 
-    @Autowired
-    private CommentRepository commentRepository;
+	 @Autowired
+	    private CommentRepository commentRepository;
+	    @Autowired
+	    private VoteRepository voteRepository;
+	    @Autowired
+	    private AuthService authService;
 
 
     @Mapping(target = "createdDate", expression = "java(java.time.Instant.now())")
